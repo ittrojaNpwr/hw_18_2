@@ -13,13 +13,13 @@ from dao.model.director import DirectorSchema
 from setup_db import db
 
 director_dao = DirectorDao(db.session)
-director_service = DirectorService()
+director_service = DirectorService(director_dao)
 
 director_schema = DirectorSchema()
 directors_schema = DirectorSchema(many=True)
 
 genre_dao = GenreDao(db.session)
-genre_service = GenreService()
+genre_service = GenreService(genre_dao)
 
 genre_schema = GenreSchema()
 genres_schema = GenreSchema(many=True)
