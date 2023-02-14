@@ -13,7 +13,7 @@ class GenresView(Resource):
         return genres_schema.dump(genres), 200
 
 
-@genre_ns.route('/<int:gid')
+@genre_ns.route('/<int:gid>')
 class GenreView(Resource):
 
     def get(self, gid):
